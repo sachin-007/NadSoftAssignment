@@ -88,27 +88,7 @@ This project implements a CRUD (Create, Read, Update, Delete) API for student da
 
 1.  Ensure PostgreSQL is running.
 2.  Use a PostgreSQL client (like pgAdmin or psql) to connect to your database.
-3.  Run the SQL script provided (`database_schema.sql` or similar) to create the `students` and `marks` tables and set up the foreign key constraints.
-
-### API Endpoints (Node.js)
-
-* `POST /api/students`: Create a new student record.
-    * Request body: `{ name, email, age, parent_id }`
-* `GET /api/students`: Retrieve a paginated list of all students.
-    * Query parameters: `page` (default: 1), `limit` (default: 10)
-    * Response includes: `data` (array of students), `totalPages`, `currentPage`, `totalCount`
-* `GET /api/students/:id`: Retrieve a single student by ID with their marks.
-* `PUT /api/students/:id`: Update a student's information.
-    * Request body: `{ name, email, age, parent_id }`
-* `DELETE /api/students/:id`: Delete a student record.
-* `POST /api/marks`: Create a new mark for a student.
-    * Request body: `{ student_id, subject, score }`
-* `GET /api/students/:student_id/marks`: Retrieve all marks for a specific student.
-* `PUT /api/marks/:id`: Update a mark.
-    * Request body: `{ subject, score }`
-* `DELETE /api/marks/:id`: Delete a mark.
-
-*(Note: Adjust the API endpoint paths and methods based on your actual implementation.)*
+3.  above given create table queries to create the `students` and `marks` tables.
 
 ### Testing the API
 
